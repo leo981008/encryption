@@ -146,7 +146,7 @@ void can_read_readfile(char *filename)
     // character by character using loop.
     while (ch != EOF){
         ch_count=ch_count+1;
-        //printf("%c",ch);
+        printf("%c",ch);
         ch = fgetc(ptr);
         //printf("%x", ch);
         }
@@ -170,10 +170,8 @@ int main(int argc, char *argv[])
 {
 	
 	FILE* en;
-	
-	
 	int in_put=atoi(argv[1]);
-    //char fliename=atoi(argv[2]);
+        //char fliename=atoi(argv[2]);
 	printf("==>%s\n", argv[2]);
 	struct EXCHANGE_BIT exchange_bit1[2];
 	struct EXCHANGE_BIT exchange_bit2[2];
@@ -184,20 +182,20 @@ int main(int argc, char *argv[])
 	exchange_bit1[1].bit_1 = 2;
 	exchange_bit1[1].bit_2 = 4;
 	
-	exchange_bit2[0].bit_1 = 0;
-    exchange_bit2[0].bit_2 = 3;
-    exchange_bit2[1].bit_1 = 3;
-    exchange_bit2[1].bit_2 = 0;
+        exchange_bit2[0].bit_1 = 0;
+        exchange_bit2[0].bit_2 = 3;
+        exchange_bit2[1].bit_1 = 3;
+        exchange_bit2[1].bit_2 = 0;
 		
-	exchange_bit3[0].bit_1 = 1;
-    exchange_bit3[0].bit_2 = 6;
-    exchange_bit3[1].bit_1 = 6;
-    exchange_bit3[1].bit_2 = 1;
-
-    exchange_bit4[0].bit_1 = 5;
-    exchange_bit4[0].bit_2 = 7;
-    exchange_bit4[1].bit_1 = 7;
-    exchange_bit4[1].bit_2 = 5;
+        exchange_bit3[0].bit_1 = 1;
+        exchange_bit3[0].bit_2 = 6;
+        exchange_bit3[1].bit_1 = 6;
+        exchange_bit3[1].bit_2 = 1;
+        
+        exchange_bit4[0].bit_1 = 5;
+        exchange_bit4[0].bit_2 = 7;
+        exchange_bit4[1].bit_1 = 7;
+        exchange_bit4[1].bit_2 = 5;
 	//printf("%x\n",word[0]);
 	if (in_put==0){
 		can_read_readfile(argv[2]);
